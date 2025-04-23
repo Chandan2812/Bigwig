@@ -13,7 +13,7 @@ const Navbar = () => {
     { name: "CLIENTS" },
     { name: "STRATEGY" },
     { name: "Y BIGWIG" },
-    { name: "THINGS WE DO" },
+    { name: "THINGS WE DO", href: "/help" },
     { name: "METHOD TO MADNESS" },
   ];
 
@@ -21,7 +21,10 @@ const Navbar = () => {
     <nav className="flex items-center justify-between px-6 py-4 border-b border-gray-200 relative">
       {/* Logo */}
       <div className="flex items-center space-x-1 text-3xl font-bold">
-        <img src={logo} alt="Bigwig Logo" className="h-10 w-auto" />
+        <a href="/">
+          {" "}
+          <img src={logo} alt="Bigwig Logo" className="h-10 w-auto" />
+        </a>
       </div>
 
       {/* Desktop Nav */}
@@ -35,7 +38,7 @@ const Navbar = () => {
                 : "text-blue-900 hover:text-rose-500 transition"
             }`}
           >
-            {link.name}
+            {link.href ? <a href={link.href}>{link.name}</a> : link.name}
           </li>
         ))}
       </ul>
@@ -65,7 +68,7 @@ const Navbar = () => {
                     : "text-blue-900 hover:text-rose-500 transition"
                 }`}
               >
-                {link.name}
+                {link.href ? <a href={link.href}>{link.name}</a> : link.name}
               </li>
             ))}
             <li>
