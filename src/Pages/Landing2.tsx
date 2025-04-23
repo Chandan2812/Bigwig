@@ -1,33 +1,37 @@
 import { useState } from "react";
 import ham from "../assets/nav.png";
 import bulb from "../assets/home-icon-1.gif";
-import logo from "../assets/homepage-mobile.gif"; // Replace with your logo path
+import logo from "../assets/homepage-mobile.gif";
 import { Link } from "react-router-dom";
 
 function Landing2() {
   const [showMenu, setShowMenu] = useState(false);
 
   return (
-    <div className="flex flex-col items-center justify-between w-full h-screen bg-[#FF3D48] relative text-white">
-      {/* Top Bar with Hamburger and Bulb */}
-      <div className="flex justify-between w-full px-4 pt-4 absolute top-6 left-4 z-10">
+    <div className="flex flex-col justify-between w-full h-screen bg-[#FF3D48] relative text-white overflow-hidden">
+      {/* Top Bar */}
+      <div className="flex justify-between w-full px-4 pt-6 absolute top-0 z-10">
         <img
           src={ham}
           alt="Menu"
           className="w-10 h-10 cursor-pointer bg-white rounded-full"
           onClick={() => setShowMenu(!showMenu)}
         />
-        <img src={bulb} alt="Bulb" className="w-1/2 -mt-5" />
+        <img src={bulb} alt="Bulb" className="w-1/2 -mt-4 -mr-10" />
       </div>
 
       {/* Center Logo */}
-      <div className="flex-1 flex items-center justify-center">
-        <img src={logo} alt="Logo" className="w-full object-contain" />
+      <div className="flex-1 flex items-center justify-center px-6 pt-16">
+        <img
+          src={logo}
+          alt="Logo"
+          className="w-full max-h-full object-contain"
+        />
       </div>
 
       {/* Dropdown Menu */}
       {showMenu && (
-        <div className="absolute top-20 left-4 right-4 text-white rounded p-4 z-20">
+        <div className="absolute top-20 left-4 right-4 text-white rounded p-4 z-20 bg-[#FF3D48]">
           <ul className="space-y-2 text-lg">
             <li>
               <Link to="/agency">Agency</Link>
