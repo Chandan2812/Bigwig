@@ -102,7 +102,7 @@ const HelpSection = () => {
           {/* Text Section */}
           <div className="md:w-1/2 space-y-4 px-10">
             {formatTitle(service.title)}
-            <p className="text-sm leading-relaxed">{service.description}</p>
+            <p className="text-2xl leading-relaxed">{service.description}</p>
             <a href="#contact" className="underline text-sm font-semibold">
               CONTACT US
             </a>
