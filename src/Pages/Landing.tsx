@@ -66,14 +66,14 @@ function Landing() {
         <img
           src={bulb}
           alt="bulb"
-          className="absolute top-0 right-0 w-1/3 h-48 z-0"
+          className="absolute top-0 right-0 w-1/3 h-48 z-0 -mt-6"
         />
 
         {/* Cube GIF - bottom left - fixed in place */}
         <img
           src={cube}
           alt="cube"
-          className="absolute bottom-0 left-0 w-1/4 z-0"
+          className="absolute bottom-0 left-0 w-1/4 z-0 -ml-16"
         />
       </div>
 
