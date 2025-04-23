@@ -5,10 +5,14 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}", // Include React and TypeScript files
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        bigwigBlue: "#25258E",
+      },
+    },
     animation: {
       scroll: "scroll 10s linear infinite",
-    }
+    },
   },
   keyframes: {
     scroll: {
