@@ -5,6 +5,7 @@ import Landing2 from "./Pages/Landing2"; // import your mobile component
 import HelpSection from "./components/HelpSection";
 import Method from "./components/Madness";
 import YBigwigSection from "./components/YBigwigSection";
+import Clients from "./components/Clients";
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
         <Route path="/things-to-do" element={<HelpSection />} />
         <Route path="/Method" element={<Method />} />
         <Route path="/YBigwigSection" element={<YBigwigSection />} />
+        <Route path="/Clients" element={<Clients />} />
       </Routes>
     </Router>
   );

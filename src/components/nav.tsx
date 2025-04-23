@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import logo from "../assets/bigwig-logo.png";
-import { href } from "react-router-dom";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -11,7 +10,7 @@ const Navbar = () => {
   const navLinks = [
     { name: "AGENCY", highlight: true },
     { name: "LEGAL" },
-    { name: "CLIENTS" },
+    { name: "CLIENTS", href: "Clients" },
     { name: "STRATEGY" },
     { name: "Y BIGWIG", href: "YBigwigSection" },
     { name: "THINGS WE DO", href: "/things-to-do" },

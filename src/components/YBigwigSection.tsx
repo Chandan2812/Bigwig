@@ -18,7 +18,7 @@ const yBigwigContent = [
     title: "Our Values",
     text: `We believe that with a positive working environment, the results are excellent. Out of admiration for our customers, we invented a modern company that prioritizes self-realization, admiration and indulgence at work.
   
-  It’s with a collective goal; surpassing objectives on each client mandate, that we combine our resources and skills to contribute in the growth of our Beloved Clienteles.`,
+  It's with a collective goal; surpassing objectives on each client mandate, that we combine our resources and skills to contribute in the growth of our Beloved Clienteles.`,
     image: value,
     bg: "bg-white text-black",
   },
@@ -66,7 +66,11 @@ const YBigwigSection = () => {
                 <img
                   src={block.image}
                   alt={block.title}
-                  className="max-w-[300px] md:max-w-[400px]"
+                  className={`${
+                    index % 2 !== 0
+                      ? "max-w-[400px] md:max-w-[700px]"
+                      : "max-w-[300px] md:max-w-[600px]"
+                  }`}
                 />
               </div>
             </div>

@@ -43,7 +43,7 @@ function Landing() {
               <Link to="/legal" className="block">
                 Legal
               </Link>
-              <Link to="/clients" className="block">
+              <Link to="/Clients" className="block">
                 Clients
               </Link>
               <Link to="/strategy" className="block">
