@@ -3,6 +3,8 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Landing from "./Pages/Landing";
 import Landing2 from "./Pages/Landing2"; // import your mobile component
 import HelpSection from "./components/HelpSection";
+import Method from "./components/Madness";
+import YBigwigSection from "./components/YBigwigSection";
 
 function App() {
   return (
@@ -25,6 +27,8 @@ function App() {
           }
         />
         <Route path="/things-to-do" element={<HelpSection />} />
+        <Route path="/Method" element={<Method />} />
+        <Route path="/YBigwigSection" element={<YBigwigSection />} />
       </Routes>
     </Router>
   );

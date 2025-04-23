@@ -49,13 +49,13 @@ function Landing() {
               <Link to="/strategy" className="block">
                 Strategy
               </Link>
-              <Link to="/bigwig" className="block">
+              <Link to="/YBigwigSection" className="block">
                 Y Bigwig
               </Link>
               <Link to="/things-to-do" className="block">
                 Things to Do
               </Link>
-              <Link to="/method-to-madness" className="block">
+              <Link to="/method" className="block">
                 Method to Madness
               </Link>
             </div>

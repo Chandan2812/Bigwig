@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import logo from "../assets/bigwig-logo.png";
+import { href } from "react-router-dom";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -12,13 +13,13 @@ const Navbar = () => {
     { name: "LEGAL" },
     { name: "CLIENTS" },
     { name: "STRATEGY" },
-    { name: "Y BIGWIG" },
-    { name: "THINGS WE DO", href: "/help" },
-    { name: "METHOD TO MADNESS" },
+    { name: "Y BIGWIG", href: "YBigwigSection" },
+    { name: "THINGS WE DO", href: "/things-to-do" },
+    { name: "METHOD TO MADNESS", href: "/method" },
   ];
 
   return (
-    <nav className="flex items-center justify-between px-6 py-4 border-b border-gray-200 relative">
+    <nav className=" flex items-center justify-between px-6 py-4 border-b border-gray-200 sticky top-0 bg-white">
       {/* Logo */}
       <div className="flex items-center space-x-1 text-3xl font-bold">
         <a href="/">
