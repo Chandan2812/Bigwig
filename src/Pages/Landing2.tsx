@@ -59,13 +59,19 @@ function Landing2() {
       )}
 
       {/* Bottom Buttons */}
-      <div className="w-full flex absolute bottom-0 left-0">
-        <button className="w-1/2 py-3 bg-black text-white border-r border-white">
+      <div className="w-full absolute bottom-0 left-0 flex">
+        <a
+          href="tel:+918368573451"
+          className="w-1/2 py-3 bg-black text-white text-center border-r"
+        >
           Call Me
-        </button>
-        <button className="w-1/2 py-3 bg-black text-white">
+        </a>
+        <Link
+          to="/contact"
+          className="w-1/2 py-3 bg-black text-white text-center"
+        >
           I'm Interested
-        </button>
+        </Link>
       </div>
     </div>
   );
