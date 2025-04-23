@@ -3,6 +3,7 @@ import homepage from "../assets/homepage.gif";
 import bulb from "../assets/home-icon-1.gif";
 import cube from "../assets/home_icon-2.gif";
 import ham from "../assets/nav.png";
+import { Link } from "react-router-dom";
 
 function Landing() {
   const [showContent, setShowContent] = useState(false);
@@ -35,14 +36,28 @@ function Landing() {
               color: "white",
             }}
           >
-            <div className="mt-4 space-y-3 font-thin">
-              <p>Agency</p>
-              <p>Legal</p>
-              <p>Clients</p>
-              <p>Strategy</p>
-              <p>Y Bigwig</p>
-              <p>Things to Do</p>
-              <p>Method to Madness</p>
+            <div className="mt-4 space-y-3 font-thin cursor-pointer">
+              <Link to="/agency" className="block">
+                Agency
+              </Link>
+              <Link to="/legal" className="block">
+                Legal
+              </Link>
+              <Link to="/clients" className="block">
+                Clients
+              </Link>
+              <Link to="/strategy" className="block">
+                Strategy
+              </Link>
+              <Link to="/bigwig" className="block">
+                Y Bigwig
+              </Link>
+              <Link to="/things-to-do" className="block">
+                Things to Do
+              </Link>
+              <Link to="/method-to-madness" className="block">
+                Method to Madness
+              </Link>
             </div>
           </div>
         </div>
