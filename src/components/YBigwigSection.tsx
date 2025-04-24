@@ -2,6 +2,7 @@ import Navbar from "./nav";
 import why from "../assets/why-us.png";
 import value from "../assets/valueIcon.png";
 import team from "../assets/team.png";
+import Footer from "./Footer";
 
 const yBigwigContent = [
   {
@@ -77,11 +78,7 @@ const YBigwigSection = () => {
           </div>
         );
       })}
-      {/* Footer */}
-      <footer className="bg-black text-white text-xs py-3 px-6 flex justify-between items-center">
-        <span>© BIGWIG 2019 | PRIVACY POLICY</span>
-        <span>MADE WITH ❤️</span>
-      </footer>
+      <Footer />
     </section>
   );
 };
