@@ -8,6 +8,7 @@ import YBigwigSection from "./components/YBigwigSection";
 import Clients from "./components/Clients";
 import Agency from "./components/Agency";
 import Strategy from "./components/Strategy";
+import ContactPage from "./Pages/Contact";
 
 function App() {
   return (
@@ -35,6 +36,7 @@ function App() {
         <Route path="/Clients" element={<Clients />} />
         <Route path="/strategy" element={<Strategy />} />
         <Route path="/Agency" element={<Agency />} />
+        <Route path="/contact" element={<ContactPage />} />
       </Routes>
     </Router>
   );
