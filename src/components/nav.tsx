@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import logo from "../assets/bigwig-logo.png";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -50,9 +51,11 @@ const Navbar = () => {
 
         {/* Contact Button */}
         <div className="hidden md:block">
-          <button className="border border-rose-500 text-blue-900 font-medium px-4 py-2 rounded-md hover:bg-rose-50 transition">
-            CONTACT
-          </button>
+          <Link to="/contact">
+            <button className="border border-rose-500 text-blue-900 font-medium px-4 py-2 rounded-md hover:bg-rose-50 transition">
+              CONTACT
+            </button>
+          </Link>
         </div>
 
         {/* Hamburger */}
@@ -89,9 +92,11 @@ const Navbar = () => {
             })}
           </ul>
 
-          <button className="border border-rose-500 text-blue-900 font-medium px-6 py-2 rounded-md hover:bg-rose-50 transition">
-            CONTACT
-          </button>
+          <Link to="/contact">
+            <button className="border border-rose-500 text-blue-900 font-medium px-6 py-2 rounded-md hover:bg-rose-50 transition">
+              CONTACT
+            </button>
+          </Link>
         </div>
       )}
     </nav>
