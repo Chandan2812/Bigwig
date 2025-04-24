@@ -5,10 +5,13 @@ import cube from "../assets/home_icon-2.gif";
 import ham from "../assets/nav.png";
 import { Link } from "react-router-dom";
 import "jquery.ripples"; // Assuming the package is installed or manually added
+import { ChevronDown } from "lucide-react";
 
 function Landing() {
   const [showContent, setShowContent] = useState(false);
   const rippleRef = useRef<HTMLDivElement>(null);
+  const [showServices, setShowServices] = useState(false);
+  const [showProducts, setShowProducts] = useState(false);
 
   useEffect(() => {
     if (rippleRef.current) {
@@ -48,16 +51,104 @@ function Landing() {
             `}
             style={{
               fontFamily: "inherit",
-              fontSize: "1.75rem",
+              fontSize: "1.2rem",
               color: "white",
             }}
           >
-            <div className="mt-4 space-y-3 font-thin cursor-pointer">
+            <div className="mt-4 space-y-3 font-thin cursor-pointer text-white z-50">
               <Link to="/Agency" className="block">
                 Agency
               </Link>
-              <Link to="/legal" className="block">
-                Our Services
+
+              <div>
+                <div
+                  onClick={() => setShowServices(!showServices)}
+                  className="flex items-center cursor-pointer hover:text-gray-300 transition space-x-2"
+                >
+                  <span className="font-thin text-white">Services</span>
+
+                  <ChevronDown className="w-4 h-4 text-white transition-transform duration-200" />
+                </div>
+
+                {showServices && (
+                  <div className="ml-4 mt-2 space-y-2 text-[16px]">
+                    <a
+                      href="https://www.bigwigdigital.in/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="block"
+                    >
+                      Digital Marketing
+                    </a>
+                    <a
+                      href="https://bigwig-events-planning.vercel.app/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="block"
+                    >
+                      Events
+                    </a>
+                  </div>
+                )}
+              </div>
+              <div>
+                <div
+                  onClick={() => setShowProducts(!showProducts)}
+                  className="flex items-center cursor-pointer hover:text-gray-300 transition space-x-2"
+                >
+                  <span className="font-thin text-white">AI Products</span>
+
+                  <ChevronDown className="w-4 h-4 text-white transition-transform duration-200" />
+                </div>
+
+                {showProducts && (
+                  <div className="ml-4 mt-2 space-y-2 text-[16px]">
+                    <a
+                      href="https://bigwigmedia.ai/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="block"
+                    >
+                      Free AI Tools
+                    </a>
+                    <a
+                      href="#"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="block"
+                    >
+                      Social Media Management
+                    </a>
+                    <a
+                      href="#"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="block"
+                    >
+                      Review Mangement
+                    </a>
+                    <a
+                      href="#"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="block"
+                    >
+                      LMS For Education
+                    </a>
+                    <a
+                      href="#"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="block"
+                    >
+                      LMS For Real Estate
+                    </a>
+                  </div>
+                )}
+              </div>
+
+              <Link to="#" className="block">
+                Products
               </Link>
               <Link to="/Clients" className="block">
                 Clients

@@ -3,6 +3,8 @@ import "../Pages/Clients.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Navbar from "./nav";
+import CallToActionSection from "./Footer";
+import { Link } from "react-router-dom";
 
 const images = [
   "https://cdn.freebiesupply.com/logos/large/2x/jw-marriott-hotel-resorts-logo-svg-vector.svg",
@@ -143,6 +145,21 @@ function Clients() {
             );
           })}
         </div>
+      </div>
+      <CallToActionSection />
+      <div className=" md:hidden fixed bottom-0 left-0 w-full flex z-50">
+        <a
+          href="tel:+918368573451"
+          className="w-1/2 py-3 bg-[#EE3D49] text-white text-center border-r border-white"
+        >
+          Call Me
+        </a>
+        <Link
+          to="/contact"
+          className="w-1/2 py-3 bg-blue-900 text-white text-center"
+        >
+          I'm Interested
+        </Link>
       </div>
     </div>
   );
