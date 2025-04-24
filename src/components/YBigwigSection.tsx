@@ -1,84 +1,118 @@
 import Navbar from "./nav";
+import Footer from "./Footer";
+import { Link } from "react-router-dom";
 import why from "../assets/why-us.png";
 import value from "../assets/valueIcon.png";
 import team from "../assets/team.png";
-import Footer from "./Footer";
-
-const yBigwigContent = [
-  {
-    title: "Why Bigwig Media?",
-    text: `Good things take time to occur. We, on the other hand, make this procedure faster. Let us be your 3rd Eye & 6th Sense and wait for the end results to be nothing but spectacular.
-  
-  BigWig Media is equipped with latest technologies, creativity and experience that leads to higher success rate.
-  
-  Our team comprises of lunatics who love to utilize their skills, combine them with requirements and magically transforms it into Narnia.`,
-    image: why,
-    bg: "bg-red-600 text-white",
-  },
-  {
-    title: "Our Values",
-    text: `We believe that with a positive working environment, the results are excellent. Out of admiration for our customers, we invented a modern company that prioritizes self-realization, admiration and indulgence at work.
-  
-  It's with a collective goal; surpassing objectives on each client mandate, that we combine our resources and skills to contribute in the growth of our Beloved Clienteles.`,
-    image: value,
-    bg: "bg-white text-black",
-  },
-  {
-    title: "Our Team",
-    text: `Team is something that can make or break any foundation. Ours fortunately is the BADASS one.
-  
-  We find reasons to show our skills, hence are proudly known as BigShowOffWig.`,
-    image: team,
-    bg: "bg-blue-900 text-white",
-  },
-];
+import TestimonialCarousel from "./Testimonial";
 
 const YBigwigSection = () => {
   return (
     <section className="w-full">
       <Navbar />
-      {yBigwigContent.map((block, index) => {
-        const isEven = index % 2 === 0; // true if image on right
-        return (
-          <div key={index} className={`${block.bg} py-16`}>
-            <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-10 items-center">
-              {/* Text First if image is on right (even index) */}
-              <div className={`${isEven ? "order-1" : "order-2"} space-y-4`}>
-                <h2
-                  className={`text-2xl md:text-3xl font-bold border-l-4 pl-4 ${
-                    block.bg.includes("bg-white")
-                      ? "border-red-600 text-red-600"
-                      : "border-white"
-                  }`}
-                >
-                  {block.title}
-                </h2>
-                <p className="text-base leading-relaxed whitespace-pre-line">
-                  {block.text}
-                </p>
-              </div>
 
-              {/* Image Second if image is on right (even index) */}
-              <div
-                className={`${
-                  isEven ? "order-2" : "order-1"
-                } flex justify-center`}
-              >
-                <img
-                  src={block.image}
-                  alt={block.title}
-                  className={`${
-                    index % 2 !== 0
-                      ? "max-w-[400px] md:max-w-[700px]"
-                      : "max-w-[300px] md:max-w-[600px]"
-                  }`}
-                />
-              </div>
-            </div>
-          </div>
-        );
-      })}
+      {/* SECTION 1 */}
+      <div className="w-full md:min-h-screen flex flex-col md:flex-row">
+        {/* Image - hidden on mobile */}
+        <div className="hidden md:flex w-full md:w-1/2 bg-[#25258E] justify-center items-center">
+          <img src={why} alt="Why Bigwig Media?" className="w-full" />
+        </div>
+
+        {/* Text Section */}
+        <div className="w-full md:w-1/2 bg-[#25258E] md:bg-white flex flex-col justify-center p-10 text-white md:text-black">
+          <h2 className="text-2xl md:text-3xl font-bold border-l-4 border-[#F22E37] pl-4 text-[#F22E37]">
+            Why Bigwig Media?
+          </h2>
+          <p className=" text-base leading-relaxed whitespace-pre-line mt-4">
+            Good things take time to occur. We, on the other hand, make this
+            procedure faster. Let us be your{" "}
+            <strong className="text-[#F22E37]">3rd Eye & 6th Sense</strong> and
+            wait for the end results to be nothing but spectacular.
+          </p>
+          <p className=" text-base leading-relaxed whitespace-pre-line mt-4">
+            <strong>BigWig Media</strong> is equipped with latest technologies,
+            creativity and experience that leads to higher success rate.
+          </p>
+          <p className=" text-base leading-relaxed whitespace-pre-line mt-4">
+            {" "}
+            Our team comprises of lunatics who love to utilize their skills,
+            combine them with requirements and magically transforms it into
+            <strong className="text-[#F22E37]">Narnia.</strong>
+          </p>
+        </div>
+      </div>
+
+      {/* SECTION 2 */}
+      <div className="w-full md:min-h-screen flex flex-col md:flex-row">
+        {/* Image - hidden on mobile */}
+        <div className="hidden md:flex w-full md:w-1/2 bg-white justify-center items-center">
+          <img src={value} alt="Our Values" className="w-2/3" />
+        </div>
+
+        {/* Text Section */}
+        <div className="w-full md:w-1/2 bg-[#F22E37] text-white flex flex-col justify-center p-10">
+          <h2 className="text-2xl md:text-3xl font-bold border-l-4 border-white pl-4">
+            Our Values
+          </h2>
+          <p className="text-base leading-relaxed whitespace-pre-line mt-4">
+            We believe that with a positive working environment, the results are
+            excellent. Out of admiration for our customers, we invented a modern
+            company that prioritizes self-realization, admiration and indulgence
+            at work.
+          </p>
+          <p className="text-base leading-relaxed whitespace-pre-line mt-4">
+            It's with a collective goal; surpassing objectives on each client
+            mandate, that we combine our resources and skills to contribute in
+            the growth of our{" "}
+            <strong className="text-[#25258E]">Beloved Clienteles.</strong>
+          </p>
+        </div>
+      </div>
+
+      {/* SECTION 3 */}
+      <div className="w-full md:min-h-screen flex flex-col md:flex-row">
+        {/* Text Section */}
+        <div className="w-full md:w-1/2 bg-[#25258E] text-white flex flex-col justify-center p-10">
+          <h2 className="text-2xl md:text-3xl font-bold border-l-4 border-white pl-4">
+            Our Team
+          </h2>
+          <p className="text-base leading-relaxed whitespace-pre-line mt-4">
+            Team is something that can make or break any foundation. Ours
+            fortunately is the{" "}
+            <strong className="text-[#F22E37]">BADASS</strong> one.
+          </p>
+          <p className="text-base leading-relaxed whitespace-pre-line mt-4">
+            We find reasons to show our skills, hence are proudly known as
+            <strong className="text-[#F22E37] text-2xl"> BigShowOffWig.</strong>
+          </p>
+        </div>
+
+        {/* Image - hidden on mobile */}
+        <div className="hidden md:flex w-full md:w-1/2 bg-white justify-center items-center">
+          <img src={team} alt="Our Team" className="w-full" />
+        </div>
+      </div>
+      <div className="border-t-2 border-[#F22E37]">
+        <TestimonialCarousel />
+      </div>
+
       <Footer />
+
+      {/* Bottom Mobile Buttons */}
+      <div className="md:hidden fixed bottom-0 left-0 w-full flex z-50">
+        <a
+          href="tel:+918368573451"
+          className="w-1/2 py-3 bg-[#EE3D49] text-white text-center border-r border-white"
+        >
+          Call Me
+        </a>
+        <Link
+          to="/contact"
+          className="w-1/2 py-3 bg-[#25258E] text-white text-center"
+        >
+          I'm Interested
+        </Link>
+      </div>
     </section>
   );
 };
