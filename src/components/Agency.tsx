@@ -71,8 +71,9 @@ const Agency = () => {
               Vision
             </h2>
             <p className="text-lg mb-3">
-              Talking about requirements, it’s 6/6. Either way, eyes need it and
-              so do you.
+              Talking about requirements, it’s{" "}
+              <span className="font-bold">6/6</span>. Either way, eyes need it
+              and so do you.
             </p>
             <p className="text-lg">
               We wish to make dull appealing, breed codes, souvenir creativity
