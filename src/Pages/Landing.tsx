@@ -57,7 +57,7 @@ function Landing() {
                 Agency
               </Link>
               <Link to="/legal" className="block">
-                Legal
+                Our Services
               </Link>
               <Link to="/Clients" className="block">
                 Clients

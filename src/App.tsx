@@ -6,6 +6,7 @@ import HelpSection from "./components/HelpSection";
 import Method from "./components/Madness";
 import YBigwigSection from "./components/YBigwigSection";
 import Clients from "./components/Clients";
+import Agency from "./components/Agency";
 
 function App() {
   return (
@@ -31,6 +32,7 @@ function App() {
         <Route path="/Method" element={<Method />} />
         <Route path="/YBigwigSection" element={<YBigwigSection />} />
         <Route path="/Clients" element={<Clients />} />
+        <Route path="/Agency" element={<Agency />} />
       </Routes>
     </Router>
   );
