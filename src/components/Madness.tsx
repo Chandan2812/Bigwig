@@ -4,8 +4,9 @@ import weprobe from "../assets/10350183.png";
 import webreakthourhg from "../assets/breakthrough.webp";
 import wepresent from "../assets/we-present.png";
 import choose from "../assets/10350183.png";
-import execute from "../assets/we-execute.jpg";
+import execute from "../assets/we-execute.png";
 import analyze from "../assets/we-analyze.webp";
+import Footer from "./Footer";
 
 const steps = [
   {
@@ -29,7 +30,7 @@ const steps = [
     content:
       "We believe in setting an example. That example could be dealing with and for your business, we’re up for it. BigWig has its own team of diverse and equally talented professionals who inhales your motive behind the business and exhales success.",
     image: webreakthourhg,
-    bg: "bg-red-600",
+    bg: "bg-[#EE3D49]",
     text: "text-white",
   },
   {
@@ -53,7 +54,7 @@ const steps = [
     content:
       "Once you have selected the best solution that inspires you, our team of specialists goes into execution mode. Whether it's a digital advertising campaign, web-design project, mobile application, web application, creative campaign, media and events - your project will be accomplished in a swift way and with our team's complete devotion.",
     image: execute,
-    bg: "bg-red-600",
+    bg: "bg-[#EE3D49]",
     text: "text-white",
   },
   {
@@ -76,7 +77,7 @@ const Method = () => {
         return (
           <div key={idx} className={`${step.bg} py-16 px-6`}>
             <div
-              className={`max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center ${
+              className={`w-5/6 mx-auto grid md:grid-cols-2 gap-12 items-center ${
                 isImageRight ? "" : "md:flex-row-reverse"
               }`}
             >
@@ -108,14 +109,7 @@ const Method = () => {
         );
       })}
 
-      <div className="bg-red-600 text-white text-center py-16 px-6">
-        <h2 className="text-2xl md:text-3xl font-semibold mb-6">
-          Let's not waste time & get started. Shall we?
-        </h2>
-        <button className="bg-white text-red-600 px-6 py-3 font-semibold rounded-md hover:bg-red-100 transition">
-          LET’S DISCUSS YOUR PROJECT
-        </button>
-      </div>
+      <Footer />
     </section>
   );
 };
