@@ -68,8 +68,8 @@ function Landing() {
               <Link to="/YBigwigSection" className="block">
                 Y Bigwig
               </Link>
-              <Link to="/things-to-do" className="block">
-                Things to Do
+              <Link to="/things-we-do" className="block">
+                Things We Do
               </Link>
               <Link to="/method" className="block">
                 Method to Madness

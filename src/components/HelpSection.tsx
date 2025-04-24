@@ -5,70 +5,77 @@ import creativeCampaign from "../assets/creative-campaign.gif";
 import app from "../assets/app.gif";
 import newWeb from "../assets/new-website.gif";
 import bird from "../assets/digital-instalation.gif";
+import Footer from "./Footer";
+import { Link } from "react-router-dom";
 
 const services = [
   {
     title: "HELP! I NEED A DIGITAL PARTNER",
     description:
-      "Starting a business can be tedious. Promoting it is a necessity. If you think generating leads, lead management, generating sales etc. can be done by a Specialist so you can save time for your other important work, then consider us your Partner... as making lives easy is our full time job.",
+      "Starting a business can be tedious. Promoting it is a necessity. If you think generating leads, lead management, generating sales etc can be done by a Specialist so you can spare time for your other important work, then consider us your Partners, as making lives easy is our full time job.",
     img: digital,
-    bg: "bg-blue-900 text-white",
+    bg: "bg-[#25258E] text-white",
+    helpColor: "text-red-500",
+    restColor: "text-white",
   },
   {
     title: "HELP! I NEED TO EXECUTE A DIGITAL CAMPAIGN",
     description:
-      "Dealing with so many abilities we pride ourselves on having the capacity to handle anything a customer tosses at us. We trust in being the unshakeable comrade our customers could ever need. Be it the reason from individuals mind control to our customer’s overall vision, the list is reason including brands contact services etc.",
+      "Dealing with so many abilities, we pride ourselves on having the capacity to handle anything a customer tosses at us. We trust in being the unparalleled accomplice our customers could ever need; that is the reason notwithstanding our center services we likewise have secondary divisions like SEO, SMO, PPC, SEM, CPL, CPM and loads of other critical sounding 3 letter acronyms.",
     img: campaign,
-    bg: "bg-red-500 text-white",
+    bg: "bg-[#EE3D49] text-white",
+    helpColor: "text-blue-900",
+    restColor: "text-white",
   },
   {
     title: "HELP! I NEED CREATIVE CAMPAIGN",
     description:
-      "Creative campaign can be a distinctive fulfilling creative clinch such as teams both online and offline. Flyers, video editing, website layout, anything you can think of that will be needed in campaigning - we've got you covered.",
+      "Hey, not so stranger. So, at this time you might have some knowledge of the work we provide. And if you thought that is enough of what we do, sorry but we have more in store for you. Creative campaign land to a destination fulfilling creative criteria such as banners: both online and offline, flyers, video editing, website layout, anything you can think of that will be needed in campaigning, we’ve got you covered.",
     img: creativeCampaign,
-    bg: "bg-white",
+    bg: "bg-white text-black",
+    helpColor: "text-blue-900",
+    restColor: "text-red-500",
   },
   {
     title: "HELP! I NEED AN APP",
     description:
-      "We have created everything from corporate apps to multiplayer games to virtual pets. We have found that the real challenge isn't designing or building the functionalities but knowing which ones give actual value - and how to distribute the man hours.",
+      "We have created everything from corporate apps to multiplayer games to virtual pets. We have found that the real challenge isn’t designing or building the functionalities but knowing which ones give actual value - and how to distribute the man hours. We have been through the process countless times and we will get you through too.",
     img: app,
-    bg: "bg-blue-900 text-white",
+    bg: "bg-[#25258E] text-white",
+    helpColor: "text-red-500",
+    restColor: "text-white",
   },
   {
     title: "HELP! I NEED E-COMMERCE WEB APPLICATION WEBSITE",
     description:
-      "A well built DIGITAL PLATFORM should generate revenue, strengthen your brand and handle pressure from your customer support. But the demands and complexity of modern web technology has risen dramatically...",
+      "A well built DIGITAL PLATFROM should generate revenue, strengthen your brand and relieve pressure from your customer support. But the demands and complexity of modern web technology has risen enormously in the past few years, leaving many outdated and broken. Let’s try to fix that. Therefore we focus on creating your base glitch free and convenient so that it can 'rise above all'.",
     img: newWeb,
-    bg: "bg-red-500 text-white",
+    bg: "bg-[#EE3D49] text-white",
+    helpColor: "text-blue-900",
+    restColor: "text-white",
   },
   {
     title: "HELP! I NEED TO ORGANIZE AN EVENT",
     description:
-      "BigWig Events can help you with this too. From corporate events, M.I.C.E, destination weddings, catering to security, every detail is seen through empathetic grace.",
+      "Eventful are the days when you have an event to run. Well, don't get me started, BigWig Events can help you with this too.BigWig is a one stop destination as we cover variety of portions, from corporate events, MICE, desitination weddings, catering to security, every detail is seen through magnifying glass.",
     img: bird,
-    bg: "bg-bigwigBlue text-white",
-  },
-  {
-    title: "HELP! MY THING IS NONE OF THE ABOVE",
-    description:
-      "Just ping us for anything, even for watering your office plants, we probably will do even that awkward task with the utmost genius.",
-    img: "/assets/service7.png",
-    bg: "bg-white",
+    bg: "bg-[#25258E] text-white",
+    helpColor: "text-red-500",
+    restColor: "text-white",
   },
 ];
 
-const formatTitle = (title: string) => {
+const formatTitle = (title: string, helpColor: string, restColor: string) => {
   if (title.startsWith("HELP!")) {
     const parts = title.split("HELP!");
     return (
-      <h3 className="text-xl font-semibold">
-        <span className="text-blue-500 font-bold">HELP!</span>
-        <span style={{ color: "#ee3d49" }}>{parts[1]}</span>
+      <h3 className="text-3xl text-center md:text-left font-bold">
+        <span className={`${helpColor} font-black`}>HELP!</span>
+        <span className={`ml-2 ${restColor}`}>{parts[1]}</span>
       </h3>
     );
   }
-  return <h3 className="text-xl font-semibold">{title}</h3>;
+  return <h3 className="text-3xl font-bold">{title}</h3>;
 };
 
 const HelpSection = () => {
@@ -91,49 +98,104 @@ const HelpSection = () => {
 
       {/* Services Section */}
       {services.map((service, index) => (
-        <div
-          key={index}
-          className={`flex flex-col md:flex-row ${
-            index % 2 === 1 ? "md:flex-row-reverse" : ""
-          } items-center justify-between px-6 py-20 min-h-[600px] ${
-            service.bg
-          }`}
-        >
-          {/* Text Section */}
-          <div className="md:w-1/2 space-y-4 px-10">
-            {formatTitle(service.title)}
-            <p className="text-2xl leading-relaxed">{service.description}</p>
-            <a href="#contact" className="underline text-sm font-semibold">
-              CONTACT US
-            </a>
-          </div>
+        <div key={index} className={`w-full ${service.bg}`}>
+          <div
+            className={`w-full md:w-5/6 mx-auto flex flex-col md:flex-row ${
+              index % 2 === 1 ? "md:flex-row-reverse" : ""
+            } items-center justify-between py-20 min-h-[600px]`}
+          >
+            {/* Text Section */}
+            <div className="md:w-1/2 space-y-6 px-6">
+              {formatTitle(service.title, service.helpColor, service.restColor)}
 
-          {/* Image */}
-          <div className="md:w-1/2 mt-6 md:mt-0 flex justify-center">
-            <img
-              src={service.img}
-              alt={service.title}
-              className="max-w-[250px] md:max-w-xs lg:max-w-md"
-            />
+              <p className="text-lg text-justify md:text-left leading-relaxed">
+                {service.description}
+              </p>
+
+              <a
+                href="/contact"
+                className="text-xl font-thin mt-6 inline-block"
+              >
+                CONTACT US
+              </a>
+            </div>
+
+            {/* Image */}
+            <div className="md:w-1/2 mt-6 md:mt-0 flex justify-center">
+              <img
+                src={service.img}
+                alt={service.title}
+                className="max-w-[250px] md:max-w-xs lg:max-w-md"
+              />
+            </div>
           </div>
         </div>
       ))}
 
-      {/* Final CTA */}
-      <div className="bg-red-500 text-white py-10 text-center space-y-4">
-        <h2 className="text-2xl font-semibold">
-          Let's not waste time & get started. Shall we?
-        </h2>
-        <button className="border px-6 py-3 rounded hover:bg-white hover:text-red-500 transition">
-          LET’S DISCUSS YOUR PROJECT
-        </button>
-      </div>
+      <section className="w-full md:w-5/6 mx-auto p-6 font-sans">
+        {/* Header */}
+        <div className="border-4 border-red-500 inline-block px-4 py-2 mb-8">
+          <span className="text-blue-700 font-bold text-2xl">HELP!</span>{" "}
+          <span className="text-red-600 text-2xl font-semibold">
+            MY THING IS NONE OF THE ABOVE
+          </span>
+        </div>
 
-      {/* Footer */}
-      <footer className="bg-black text-white text-xs py-3 px-6 flex justify-between items-center">
-        <span>© BIGWIG 2019 | PRIVACY POLICY</span>
-        <span>MADE WITH ❤️</span>
-      </footer>
+        {/* Services List */}
+        <div className="flex flex-col sm:flex-row md:gap-6 mb-8">
+          <ul className="list-disc ml-6 space-y-2">
+            <li>CMS, LMS & CRM Development</li>
+            <li>Landing Page & Banner Ad's</li>
+            <li>Marketing Automation</li>
+            <li>Logo Designing</li>
+            <li>2D & 3D Animation & Motion Graphics</li>
+            <li>Email Marketing</li>
+            <li>Offline Creatives</li>
+          </ul>
+          <ul className="list-disc ml-6 space-y-2 mt-2">
+            <li>Content Writing</li>
+            <li>Blogs, Articles & Press Release</li>
+            <li>Video Shoot</li>
+            <li>Drone Shoot</li>
+            <li>Web & Marketing Analysis</li>
+            <li>Brand Doc & Brochures</li>
+            <li>ATL, BTL, TTL Services</li>
+          </ul>
+        </div>
+
+        {/* Call to action */}
+        <p className="mb-2">
+          Just{" "}
+          <span className="border-4 border-red-500 px-3 py-1 font-semibold inline-block">
+            Poke Us
+          </span>{" "}
+          for anything, even for watering your office plants, we probably
+        </p>
+        <p className="mb-4">
+          will do even that awkward task with the utmost genius.
+        </p>
+
+        {/* Contact Us */}
+        <p className="text-blue-700 font-bold tracking-wider">
+          <a href="/contact">CONTACT US</a>
+        </p>
+      </section>
+
+      <Footer />
+      <div className=" md:hidden fixed bottom-0 left-0 w-full flex z-50">
+        <a
+          href="tel:+918368573451"
+          className="w-1/2 py-3 bg-[#EE3D49] text-white text-center border-r border-white"
+        >
+          Call Me
+        </a>
+        <Link
+          to="/contact"
+          className="w-1/2 py-3 bg-blue-900 text-white text-center"
+        >
+          I'm Interested
+        </Link>
+      </div>
     </div>
   );
 };

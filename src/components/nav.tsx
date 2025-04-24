@@ -17,7 +17,7 @@ const Navbar = () => {
     { name: "CLIENTS", href: "/clients" },
     { name: "STRATEGY", href: "/strategy" },
     { name: "Y BIGWIG", href: "/YBigwigSection" },
-    { name: "THINGS WE DO", href: "/things-to-do" },
+    { name: "THINGS WE DO", href: "/things-we-do" },
     { name: "METHOD TO MADNESS", href: "/method" },
   ];
 

@@ -27,7 +27,7 @@ function App() {
             </>
           }
         />
-        <Route path="/things-to-do" element={<HelpSection />} />
+        <Route path="/things-we-do" element={<HelpSection />} />
         <Route path="/Method" element={<Method />} />
         <Route path="/YBigwigSection" element={<YBigwigSection />} />
         <Route path="/Clients" element={<Clients />} />

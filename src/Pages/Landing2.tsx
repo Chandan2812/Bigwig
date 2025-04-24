@@ -49,7 +49,7 @@ function Landing2() {
               <Link to="/bigwig">Y Bigwig</Link>
             </li>
             <li>
-              <Link to="/things-to-do">Things to Do</Link>
+              <Link to="/things-we-do">Things We Do</Link>
             </li>
             <li>
               <Link to="/method-to-madness">Method to Madness</Link>
