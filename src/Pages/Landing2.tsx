@@ -3,9 +3,12 @@ import ham from "../assets/nav.png";
 import bulb from "../assets/home-icon-1.gif";
 import logo from "../assets/homepage-mobile.gif";
 import { Link } from "react-router-dom";
+import { ChevronDown } from "lucide-react";
 
 function Landing2() {
   const [showMenu, setShowMenu] = useState(false);
+  const [showServices, setShowServices] = useState(false);
+  const [showProducts, setShowProducts] = useState(false);
 
   return (
     <div className="flex flex-col justify-between w-full h-screen bg-[#FF3D48] relative text-white overflow-hidden">
@@ -36,9 +39,92 @@ function Landing2() {
             <li>
               <Link to="/Agency">Agency</Link>
             </li>
-            <li>
-              <Link to="/legal">Legal</Link>
-            </li>
+            <div>
+              <div
+                onClick={() => setShowServices(!showServices)}
+                className="flex items-center cursor-pointer hover:text-gray-300 transition space-x-2"
+              >
+                <span className="font-thin text-white">Services</span>
+
+                <ChevronDown className="w-4 h-4 text-white transition-transform duration-200" />
+              </div>
+
+              {showServices && (
+                <div className="ml-4 mt-2 space-y-2 text-[16px]">
+                  <a
+                    href="https://www.bigwigdigital.in/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block"
+                  >
+                    Digital Marketing
+                  </a>
+                  <a
+                    href="https://bigwig-events-planning.vercel.app/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block"
+                  >
+                    Events
+                  </a>
+                </div>
+              )}
+            </div>
+            <div>
+              <div
+                onClick={() => setShowProducts(!showProducts)}
+                className="flex items-center cursor-pointer hover:text-gray-300 transition space-x-2"
+              >
+                <span className="font-thin text-white">AI Products</span>
+
+                <ChevronDown className="w-4 h-4 text-white transition-transform duration-200" />
+              </div>
+
+              {showProducts && (
+                <div className="ml-4 mt-2 space-y-2 text-[16px]">
+                  <a
+                    href="https://bigwigmedia.ai/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block"
+                  >
+                    Free AI Tools
+                  </a>
+                  <a
+                    href="#"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block"
+                  >
+                    Social Media Management
+                  </a>
+                  <a
+                    href="#"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block"
+                  >
+                    Review Mangement
+                  </a>
+                  <a
+                    href="#"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block"
+                  >
+                    LMS For Education
+                  </a>
+                  <a
+                    href="#"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block"
+                  >
+                    LMS For Real Estate
+                  </a>
+                </div>
+              )}
+            </div>
             <li>
               <Link to="/clients">Clients</Link>
             </li>
