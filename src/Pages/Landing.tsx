@@ -95,26 +95,37 @@ function Landing() {
 
       {/* Right 1/6 Hover Text Area */}
       <div className="w-1/6 flex flex-col justify-start mt-10 items-end space-y-4 text-white font-light text-3xl">
-        <HoverText
-          defaultText="LET'S"
-          hoverText="Let's Talk About Us"
-          boldText="Talk About Us"
-        />
-        <HoverText
-          defaultText="MAKE"
-          hoverText="Make a Project"
-          boldText=" a Project"
-        />
-        <HoverText
-          defaultText="THINGS"
-          hoverText="Things We Do"
-          boldText="We Do"
-        />
-        <HoverText
-          defaultText="INTERESTING"
-          hoverText="Interested?"
-          boldText="Interested?"
-        />
+        <Link to="/agency">
+          <HoverText
+            defaultText="LET'S"
+            hoverText="Let's Talk About Us"
+            boldText="Talk About Us"
+          />
+        </Link>
+
+        <Link to="/contact">
+          <HoverText
+            defaultText="MAKE"
+            hoverText="Make a Project"
+            boldText=" a Project"
+          />
+        </Link>
+
+        <Link to="/things-we-do">
+          <HoverText
+            defaultText="THINGS"
+            hoverText="Things We Do"
+            boldText="We Do"
+          />
+        </Link>
+
+        <Link to="/contact">
+          <HoverText
+            defaultText="INTERESTING"
+            hoverText="Interested?"
+            boldText="Interested?"
+          />
+        </Link>
       </div>
     </div>
   );
