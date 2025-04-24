@@ -11,9 +11,11 @@ const Agency = () => {
       <Navbar />
 
       {/* Narrative Section */}
-      <section className="bg-gradient-to-r from-[#e43038] to-[#2d197c] px-6 py-32 relative overflow-hidden">
-        <div className="max-w-4xl mx-auto text-white">
-          <h2 className="text-4xl font-extrabold mb-8">Narrative</h2>
+      <section className="w-full bg-gradient-to-r from-[#e43038] to-[#2d197c] px-4 md:px-4 py-24 md:py-32 relative overflow-hidden">
+        <div className="w-full md:w-5/6 mx-auto text-white">
+          <h2 className="text-4xl md:text-5xl font-extrabold mb-8">
+            Narrative
+          </h2>
 
           <p className="mb-5 text-lg leading-relaxed font-light">
             So it all happened when one fine day I was sitting under a tree and
@@ -36,20 +38,23 @@ const Agency = () => {
           </p>
         </div>
 
-        {/* Light Bulb Line (replicated from image) */}
-        <div className="absolute right-0 top-0 bottom-0 w-1/4 bg-[url('/path-to-your-bulbs-image.png')] bg-no-repeat bg-cover bg-right" />
+        {/* Decorative Line or Bulbs */}
+        <div className="absolute right-0 top-0 bottom-0 w-1/4 bg-[url('/path-to-your-bulbs-image.png')] bg-no-repeat bg-cover bg-right hidden md:block" />
       </section>
 
       {/* Mission Section */}
-      <section className="bg-white text-black px-6 py-32">
-        <div className="max-w-4xl mx-auto flex flex-col-reverse lg:flex-row items-center">
-          <div className="lg:mr-10">
-            <h2 className="text-[#e43038] text-5xl font-bold border-2 border-[#e43038] inline-block px-4 py-2 mb-4 mt-8 lg:mt-0">
+      <section className="bg-white text-black px-4 md:px-4 py-10">
+        <div className="w-full md:w-5/6 mx-auto flex flex-col-reverse md:flex-row items-center gap-8">
+          <div className="w-full md:w-1/2 flex justify-between">
+            <img src={mission} alt="Mission Icon" className="w-40 md:w-2/3" />
+          </div>
+          <div className="w-full md:w-2/3">
+            <h2 className="text-[#e43038] text-4xl md:text-5xl font-bold border-2 border-[#e43038] inline-block px-4 py-2 mb-4">
               Mission
             </h2>
             <p className="mb-3 text-lg">
-              Your portion of mind plus our psyche will have their own{" "}
-              <span className="font-bold">PARTY</span>.
+              Your portion of mind plus our psyche will have their own
+              <span className="font-semibold"> PARTY</span>.
             </p>
             <p className="text-lg">
               Your ideas combined with ours will be a deadly combination. So,
@@ -57,40 +62,42 @@ const Agency = () => {
               find ways to be with you, even when the job is done.
             </p>
           </div>
-          <div className="w-full flex justify-center mb-6 lg:mb-0">
-            <img src={mission} alt="Mission Icon" className="w-48 md:w-60" />
-          </div>
         </div>
       </section>
 
       {/* Vision Section */}
-      <section className="bg-[#2d197c] px-6 py-32">
-        <div className="max-w-4xl mx-auto flex flex-col-reverse lg:flex-row-reverse items-center text-white">
-          <div className="lg:ml-10">
-            <h2 className="text-[#e43038] text-5xl font-bold mb-4 mt-8 lg:mt-0">
+      <section className="bg-[#2d197c] px-4 md:px-4 py-10">
+        <div className="w-full md:w-5/6 mx-auto flex flex-col-reverse lg:flex-row-reverse items-center text-white gap-8">
+          <div className="w-full lg:w-1/2 flex justify-between">
+            <img src={vision} alt="Vision Icon" className="w-72 md:w-full" />
+          </div>
+          <div className="w-full lg:w-1/2">
+            <h2 className="text-[#e43038] text-4xl md:text-5xl font-bold mb-4">
               Vision
             </h2>
+            <p className="text-lg">
+              Talking about requirements, it's
+              <span className="font-bold"> 6/6.</span>
+            </p>
             <p className="text-lg mb-3">
-              Talking about requirements, it’s{" "}
-              <span className="font-bold">6/6</span>. Either way, eyes need it
-              and so do you.
+              Either way, eyes need it and so do you.
             </p>
             <p className="text-lg">
               We wish to make dull appealing, breed codes, souvenir creativity
               and relish them with management.
             </p>
           </div>
-          <div className="w-full flex justify-center mb-6 lg:mb-0">
-            <img src={vision} alt="Vision Icon" className="w-72 md:w-96" />
-          </div>
         </div>
       </section>
 
       {/* Process Section */}
-      <section className="bg-[#e43038] px-6 py-32">
-        <div className="max-w-4xl mx-auto flex flex-col-reverse lg:flex-row items-center text-white">
-          <div className="lg:mr-10">
-            <h2 className="text-white text-5xl font-bold mb-4 mt-8 lg:mt-0">
+      <section className="bg-[#e43038] px-4 md:px-4 py-10">
+        <div className="w-full md:w-5/6 mx-auto flex flex-col-reverse lg:flex-row items-center text-white gap-8">
+          <div className="w-full lg:w-1/2 flex justify-between">
+            <img src={process} alt="Process Icon" className="w-44 md:w-2/3" />
+          </div>
+          <div className="w-full lg:w-1/2">
+            <h2 className="text-white text-4xl md:text-5xl font-bold mb-4">
               Process
             </h2>
             <p className="text-lg mb-3">
@@ -105,17 +112,17 @@ const Agency = () => {
               say <span className="font-bold text-white">“WOW.”</span>
             </p>
           </div>
-          <div className="w-full flex justify-center mb-6 lg:mb-0">
-            <img src={process} alt="Process Icon" className="w-44 md:w-56" />
-          </div>
         </div>
       </section>
 
       {/* Strategy Section */}
-      <section className="bg-[#2d197c] px-6 py-32">
-        <div className="max-w-4xl mx-auto flex flex-col-reverse lg:flex-row-reverse items-center text-white">
-          <div className="lg:ml-10">
-            <h2 className="text-[#e43038] text-5xl font-bold mb-4 mt-8 lg:mt-0">
+      <section className="bg-[#2d197c] px-4 md:px-4 py-10">
+        <div className="w-full md:w-5/6 mx-auto flex flex-col-reverse lg:flex-row-reverse items-center text-white gap-8">
+          <div className="w-full lg:w-1/2 flex justify-between">
+            <img src={strategy} alt="Strategy Icon" className="w-48 md:w-2/3" />
+          </div>
+          <div className="w-full lg:w-1/2">
+            <h2 className="text-[#e43038] text-4xl md:text-5xl font-bold mb-4">
               Strategy
             </h2>
             <p className="text-lg mb-3">
@@ -127,9 +134,6 @@ const Agency = () => {
             <p className="text-lg">
               Bcoz – If You Aint First, Then we are last.
             </p>
-          </div>
-          <div className="w-full flex justify-center mb-6 lg:mb-0">
-            <img src={strategy} alt="Strategy Icon" className="w-48 md:w-80" />
           </div>
         </div>
       </section>
