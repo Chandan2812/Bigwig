@@ -34,7 +34,7 @@ function Landing2() {
         <div className="absolute top-20 left-4 right-4 text-white rounded p-4 z-20 bg-[#FF3D48]">
           <ul className="space-y-2 text-lg">
             <li>
-              <Link to="/agency">Agency</Link>
+              <Link to="/Agency">Agency</Link>
             </li>
             <li>
               <Link to="/legal">Legal</Link>

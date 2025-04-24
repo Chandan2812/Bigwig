@@ -53,7 +53,7 @@ function Landing() {
             }}
           >
             <div className="mt-4 space-y-3 font-thin cursor-pointer">
-              <Link to="/agency" className="block">
+              <Link to="/Agency" className="block">
                 Agency
               </Link>
               <Link to="/legal" className="block">
