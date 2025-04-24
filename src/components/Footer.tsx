@@ -1,4 +1,10 @@
-import { FaFacebookF, FaTwitter, FaInstagram, FaYoutube } from "react-icons/fa";
+import {
+  FaFacebookF,
+  FaInstagram,
+  FaYoutube,
+  FaLinkedin,
+} from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
 
 export default function CallToActionSection() {
   return (
@@ -26,16 +32,39 @@ export default function CallToActionSection() {
           MADE WITH <span className="text-red-500">❤️</span>
         </div>
         <div className="flex space-x-4 text-xl">
-          <a href="#" className="hover:bg-[#25258E] bg-gray-400 p-1 rounded">
+          <a
+            href="https://www.facebook.com/people/Bigwig-Digital/61575340735142/"
+            className="hover:bg-[#25258E] bg-gray-400 p-1 rounded"
+            target="blank"
+          >
             <FaFacebookF color="black" />
           </a>
-          <a href="#" className="hover:bg-[#25258E] bg-gray-400 p-1 rounded">
-            <FaTwitter color="black" />
+          <a
+            href="https://x.com/bigwig_digital"
+            className="hover:bg-[#25258E] bg-gray-400 p-1 rounded"
+            target="blank"
+          >
+            <FaXTwitter color="black" />
           </a>
-          <a href="#" className="hover:bg-[#25258E] bg-gray-400 p-1 rounded">
+          <a
+            href="https://www.linkedin.com/company/106698073/admin/dashboard/"
+            className="hover:bg-[#25258E] bg-gray-400 p-1 rounded"
+            target="blank"
+          >
+            <FaLinkedin color="black" />
+          </a>
+          <a
+            href="https://www.instagram.com/bigwigdigital/?hl=en"
+            className="hover:bg-[#25258E] bg-gray-400 p-1 rounded"
+            target="blank"
+          >
             <FaInstagram color="black" />
           </a>
-          <a href="#" className="hover:bg-[#25258E] bg-gray-400 p-1 rounded">
+          <a
+            href="https://www.youtube.com/@BigwigDigital2024"
+            className="hover:bg-[#25258E] bg-gray-400 p-1 rounded"
+            target="blank"
+          >
             <FaYoutube color="black" />
           </a>
         </div>
