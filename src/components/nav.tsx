@@ -24,7 +24,7 @@ const Navbar = () => {
 
   return (
     <nav className="w-full bg-white border-b border-gray-200 sticky top-0 z-50">
-      <div className="w-5/6 mx-auto flex items-center justify-between px-6 py-4">
+      <div className="w-full md:w-5/6 mx-auto flex items-center justify-between px-6 py-4">
         {/* Logo */}
         <a href="/" className="flex items-center space-x-1 text-3xl font-bold">
           <img src={logo} alt="Bigwig Logo" className="h-10 w-auto" />
@@ -58,14 +58,18 @@ const Navbar = () => {
 
         {/* Hamburger */}
         <button className="md:hidden" onClick={toggleMenu}>
-          {menuOpen ? <X size={28} /> : <Menu size={28} />}
+          {menuOpen ? (
+            <X size={28} color="#EE3D49" />
+          ) : (
+            <Menu size={28} color="#EE3D49" />
+          )}
         </button>
       </div>
 
       {/* Mobile Menu */}
       {menuOpen && (
-        <div className="md:hidden w-full bg-white border-t border-gray-200 shadow-md z-10">
-          <ul className="flex flex-col text-sm font-medium px-6 py-4 space-y-4">
+        <div className="md:hidden absolute top-full left-0 w-full h-[calc(100vh-72px)] bg-white z-40 flex flex-col items-center justify-center space-y-6 px-6 py-4">
+          <ul className="flex flex-col text-lg font-medium items-center space-y-6">
             {navLinks.map((link, i) => {
               const isActive =
                 activePath === link.href ||
@@ -84,13 +88,11 @@ const Navbar = () => {
                 </li>
               );
             })}
-
-            <li>
-              <button className="border border-rose-500 text-blue-900 font-medium px-4 py-2 rounded-md hover:bg-rose-50 transition w-full">
-                CONTACT
-              </button>
-            </li>
           </ul>
+
+          <button className="border border-rose-500 text-blue-900 font-medium px-6 py-2 rounded-md hover:bg-rose-50 transition">
+            CONTACT
+          </button>
         </div>
       )}
     </nav>

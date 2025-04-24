@@ -7,6 +7,7 @@ import choose from "../assets/10350183.png";
 import execute from "../assets/we-execute.png";
 import analyze from "../assets/we-analyze.webp";
 import Footer from "./Footer";
+import { Link } from "react-router-dom";
 
 const steps = [
   {
@@ -69,8 +70,16 @@ const steps = [
 
 const Method = () => {
   return (
-    <section>
+    <section className="relative">
       <Navbar />
+      <div className=" mx-auto text-center py-10 bg-[#EE3D49] md:hidden block">
+        <h1
+          className="text-5xl text-white font-thin"
+          style={{ fontFamily: "inherit" }}
+        >
+          Our Method To Madness
+        </h1>
+      </div>
       {steps.map((step, idx) => {
         const isImageRight = idx % 2 === 0;
 
@@ -110,6 +119,20 @@ const Method = () => {
       })}
 
       <Footer />
+      <div className=" md:hidden fixed bottom-0 left-0 w-full flex z-50">
+        <a
+          href="tel:+918368573451"
+          className="w-1/2 py-3 bg-[#EE3D49] text-white text-center border-r border-white"
+        >
+          Call Me
+        </a>
+        <Link
+          to="/contact"
+          className="w-1/2 py-3 bg-blue-900 text-white text-center"
+        >
+          I'm Interested
+        </Link>
+      </div>
     </section>
   );
 };

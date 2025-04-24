@@ -21,7 +21,7 @@ export default function CallToActionSection() {
       </div>
 
       {/* Footer Section */}
-      <footer className="bg-black text-white text-sm py-7 px-10 flex flex-col md:flex-row justify-between items-center">
+      <footer className="bg-black text-white text-sm pb-16 md:pb-5 py-7 px-10 flex flex-col md:flex-row justify-between items-center">
         <div className="mb-2 md:mb-0 text-gray-400">
           © BIGWIG 2025 |{" "}
           <a href="#" className="underline hover:text-gray-400">
