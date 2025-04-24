@@ -1,16 +1,32 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import homepage from "../assets/homepage.gif";
 import bulb from "../assets/home-icon-1.gif";
 import cube from "../assets/home_icon-2.gif";
 import ham from "../assets/nav.png";
 import { Link } from "react-router-dom";
+import "jquery.ripples"; // Assuming the package is installed or manually added
 
 function Landing() {
   const [showContent, setShowContent] = useState(false);
+  const rippleRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (rippleRef.current) {
+      try {
+        ($(rippleRef.current) as any).ripples({
+          resolution: 256,
+          perturbance: 0.01,
+        });
+      } catch (e) {
+        console.error("Ripple effect failed to initialize:", e);
+      }
+    }
+  }, []);
 
   return (
     <div
-      className="flex w-full h-screen bg-cover bg-center"
+      ref={rippleRef}
+      className="flex w-full h-screen bg-cover bg-center full-landing-image"
       style={{ backgroundImage: `url(${homepage})` }}
     >
       {/* Left 5/6 Content */}
