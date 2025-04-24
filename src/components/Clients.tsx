@@ -104,12 +104,12 @@ function Clients() {
   }, []);
 
   return (
-    <div className="bg-black">
-      <div className="mb-20">
+    <div>
+      <div className="mb-10">
         <Navbar />
       </div>
 
-      <div className="px-4 py-8 max-w-6xl mx-auto">
+      <div className="px-4 py-8 w-5/6 mx-auto">
         <div className="grid grid-cols-2 lg:grid-cols-5 gap-6">
           {images.map((img, index) => {
             const { bg, border } = stylePairs[index % stylePairs.length];
