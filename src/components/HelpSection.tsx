@@ -129,7 +129,10 @@ const HelpSection = () => {
 
               <a
                 href="/contact"
-                className="text-xl font-thin mt-6 inline-block"
+                className={`text-xl mt-6 inline-block border-2 p-2 rounded border-${service.helpColor.replace(
+                  "text-",
+                  ""
+                )}`}
               >
                 CONTACT US
               </a>
@@ -202,7 +205,7 @@ const HelpSection = () => {
         </p>
 
         {/* Contact Us */}
-        <p className="text-blue-700 font-bold tracking-wider">
+        <p className="text-blue-900 font-bold tracking-wider border-2 p-2 border-blue-900 w-fit rounded">
           <a href="/contact">CONTACT US</a>
         </p>
       </section>
