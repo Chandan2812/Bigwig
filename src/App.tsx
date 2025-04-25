@@ -9,6 +9,7 @@ import Clients from "./components/Clients";
 import Agency from "./components/Agency";
 import Strategy from "./components/Strategy";
 import ContactPage from "./Pages/Contact";
+import Privacy from "./Pages/Privacy";
 
 function App() {
   return (
@@ -32,11 +33,12 @@ function App() {
         />
         <Route path="/things-we-do" element={<HelpSection />} />
         <Route path="/Method" element={<Method />} />
-        <Route path="/YBigwigSection" element={<YBigwigSection />} />
+        <Route path="/Y-Bigwig" element={<YBigwigSection />} />
         <Route path="/Clients" element={<Clients />} />
         <Route path="/strategy" element={<Strategy />} />
         <Route path="/Agency" element={<Agency />} />
         <Route path="/contact" element={<ContactPage />} />
+        <Route path="/privacy-policy" element={<Privacy />} />
       </Routes>
     </Router>
   );

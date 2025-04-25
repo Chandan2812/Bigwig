@@ -132,7 +132,7 @@ function Landing2() {
               <Link to="/strategy">Strategy</Link>
             </li>
             <li>
-              <Link to="/bigwig">Y Bigwig</Link>
+              <Link to="/Y-Bigwig">Y Bigwig</Link>
             </li>
             <li>
               <Link to="/things-we-do">Things We Do</Link>

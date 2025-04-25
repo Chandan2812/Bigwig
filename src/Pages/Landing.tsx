@@ -156,7 +156,7 @@ function Landing() {
               <Link to="/strategy" className="block">
                 Strategy
               </Link>
-              <Link to="/YBigwigSection" className="block">
+              <Link to="/Y-Bigwig" className="block">
                 Y Bigwig
               </Link>
               <Link to="/things-we-do" className="block">

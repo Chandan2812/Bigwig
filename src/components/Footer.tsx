@@ -15,16 +15,18 @@ export default function CallToActionSection() {
           Let's not waste time &amp; get started.{" "}
           <span className="text-white font-extrabold">Shall we?</span>
         </h1>
-        <button className="bg-transparent border-2 border-white px-8 py-4 rounded shadow-lg text-white font-semibold text-lg tracking-widest hover:bg-white hover:text-red-600 transition">
-          LET'S DISCUSS YOUR PROJECT
-        </button>
+        <a href="/contact">
+          <button className="bg-transparent border-2 border-white px-8 py-4 rounded shadow-lg text-white font-semibold text-lg tracking-widest hover:bg-white hover:text-red-600 transition">
+            LET'S DISCUSS YOUR PROJECT
+          </button>
+        </a>
       </div>
 
       {/* Footer Section */}
       <footer className="bg-black text-white text-sm pb-16 md:pb-5 py-7 px-10 flex flex-col md:flex-row justify-between items-center">
         <div className="mb-2 md:mb-0 text-gray-400">
           © BIGWIG 2025 |{" "}
-          <a href="#" className="underline hover:text-gray-400">
+          <a href="/privacy-policy" className="underline hover:text-gray-400">
             PRIVACY POLICY
           </a>
         </div>
