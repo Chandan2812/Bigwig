@@ -5,8 +5,18 @@ import why from "../assets/why-us.png";
 import value from "../assets/valueIcon.png";
 import team from "../assets/team.png";
 import TestimonialCarousel from "./Testimonial";
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const YBigwigSection = () => {
+  useEffect(() => {
+    AOS.init({
+      once: true,
+      offset: 50,
+      easing: "ease-in-out",
+    });
+  }, []);
   return (
     <section className="w-full">
       <Navbar />
@@ -15,11 +25,21 @@ const YBigwigSection = () => {
       <div className="w-full md:min-h-screen flex flex-col md:flex-row">
         {/* Image - hidden on mobile */}
         <div className="hidden md:flex w-full md:w-1/2 bg-[#25258E] justify-center items-center">
-          <img src={why} alt="Why Bigwig Media?" className="w-full" />
+          <img
+            src={why}
+            alt="Why Bigwig Media?"
+            className="w-full"
+            data-aos="fade-right"
+            data-aos-duration="2000"
+          />
         </div>
 
         {/* Text Section */}
-        <div className="w-full md:w-1/2 bg-[#25258E] md:bg-white flex flex-col justify-center p-10 text-white md:text-black">
+        <div
+          data-aos="fade-left"
+          data-aos-duration="2000"
+          className="w-full md:w-1/2 bg-[#25258E] md:bg-white flex flex-col justify-center p-10 text-white md:text-black"
+        >
           <div className="relative w-fit group">
             <h2 className="text-3xl md:text-4xl text-[#F22E37] font-bold border-4 border-[#F22E37] px-4 py-2 bg-white relative z-10">
               Why Bigwig Media?
@@ -49,11 +69,21 @@ const YBigwigSection = () => {
       <div className="w-full md:min-h-screen flex flex-col md:flex-row">
         {/* Image - hidden on mobile */}
         <div className="hidden md:flex w-full md:w-1/2 bg-white justify-center items-center">
-          <img src={value} alt="Our Values" className="w-2/3" />
+          <img
+            src={value}
+            alt="Our Values"
+            className="w-2/3"
+            data-aos="fade-right"
+            data-aos-duration="2000"
+          />
         </div>
 
         {/* Text Section */}
-        <div className="w-full md:w-1/2 bg-[#F22E37] text-white flex flex-col justify-center p-10">
+        <div
+          className="w-full md:w-1/2 bg-[#F22E37] text-white flex flex-col justify-center p-10"
+          data-aos="fade-left"
+          data-aos-duration="2000"
+        >
           <div className="relative w-fit group">
             <h2 className="text-3xl md:text-4xl text-white font-bold border-4 border-white px-4 py-2 bg-[#F22E37] relative z-10">
               Our Values
@@ -78,7 +108,11 @@ const YBigwigSection = () => {
       {/* SECTION 3 */}
       <div className="w-full md:min-h-screen flex flex-col md:flex-row">
         {/* Text Section */}
-        <div className="w-full md:w-1/2 bg-[#25258E] text-white flex flex-col justify-center p-10">
+        <div
+          className="w-full md:w-1/2 bg-[#25258E] text-white flex flex-col justify-center p-10"
+          data-aos="fade-right"
+          data-aos-duration="2000"
+        >
           <div className="relative w-fit group">
             <h2 className="text-3xl md:text-4xl text-white font-bold border-4 border-white px-4 py-2 bg-[#25258E] relative z-10">
               Our Team
@@ -98,7 +132,13 @@ const YBigwigSection = () => {
 
         {/* Image - hidden on mobile */}
         <div className="hidden md:flex w-full md:w-1/2 bg-white justify-center items-center">
-          <img src={team} alt="Our Team" className="w-full" />
+          <img
+            src={team}
+            alt="Our Team"
+            className="w-full"
+            data-aos="fade-left"
+            data-aos-duration="2000"
+          />
         </div>
       </div>
       <div className="border-t-2 border-[#F22E37]">

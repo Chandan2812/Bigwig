@@ -7,6 +7,9 @@ import newWeb from "../assets/new-website.gif";
 import bird from "../assets/digital-instalation.gif";
 import Footer from "./Footer";
 import { Link } from "react-router-dom";
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const services = [
   {
@@ -79,6 +82,14 @@ const formatTitle = (title: string, helpColor: string, restColor: string) => {
 };
 
 const HelpSection = () => {
+  useEffect(() => {
+    AOS.init({
+      once: true,
+      offset: 50,
+      easing: "ease-in-out",
+    });
+  }, []);
+
   return (
     <div className="w-full">
       <Navbar />
@@ -105,7 +116,11 @@ const HelpSection = () => {
             } items-center justify-between py-20 min-h-[600px]`}
           >
             {/* Text Section */}
-            <div className="md:w-1/2 space-y-6 px-6">
+            <div
+              className="md:w-1/2 space-y-6 px-6 "
+              data-aos="fade-right"
+              data-aos-duration="2000"
+            >
               {formatTitle(service.title, service.helpColor, service.restColor)}
 
               <p className="text-lg text-justify md:text-left leading-relaxed">
@@ -126,13 +141,19 @@ const HelpSection = () => {
                 src={service.img}
                 alt={service.title}
                 className="max-w-[250px] md:max-w-xs lg:max-w-md"
+                data-aos="fade-left"
+                data-aos-duration="2000"
               />
             </div>
           </div>
         </div>
       ))}
 
-      <section className="w-full md:w-5/6 mx-auto p-6 font-sans">
+      <section
+        className="w-full md:w-5/6 mx-auto p-6 font-sans"
+        data-aos="zoom-in"
+        data-aos-duration="2000"
+      >
         {/* Header */}
         <div className=" inline-block px-4 py-2 mb-8">
           <div className="relative w-fit group">

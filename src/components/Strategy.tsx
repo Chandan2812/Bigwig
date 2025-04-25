@@ -2,14 +2,25 @@ import { Link } from "react-router-dom";
 
 import CallToActionSection from "./Footer";
 import Navbar from "./nav";
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 function Strategy() {
+  useEffect(() => {
+    AOS.init({
+      once: true,
+      offset: 50,
+      easing: "ease-in-out",
+    });
+  }, []);
+
   return (
     <div>
       <Navbar />
 
       {/* Section 1: Title on Left */}
-      <section className="w-full">
+      <section className="w-full" data-aos="fade-up" data-aos-duration="2000">
         <div className="w-full md:w-5/6 mx-auto flex flex-col md:flex-row">
           {/* Text Section */}
           <div className="w-full flex flex-col justify-center md:py-32 px-4 py-10">
@@ -33,7 +44,11 @@ function Strategy() {
       </section>
 
       {/* Section 2: Title on Right */}
-      <section className="w-full bg-[#EE3D49]">
+      <section
+        className="w-full bg-[#EE3D49]"
+        data-aos="fade-up"
+        data-aos-duration="2000"
+      >
         <div className="w-full md:w-5/6 mx-auto flex flex-col md:flex-row-reverse">
           {/* Text Section */}
           <div className="w-full flex flex-col justify-center md:py-32 px-4 py-10">
@@ -54,7 +69,11 @@ function Strategy() {
       </section>
 
       {/* Section 3 */}
-      <section className="w-full bg-[#25258E]">
+      <section
+        className="w-full bg-[#25258E]"
+        data-aos="fade-up"
+        data-aos-duration="2000"
+      >
         <div className="w-full md:w-5/6 mx-auto flex flex-col md:flex-row-reverse">
           {/* Text Section */}
           <div className="w-full flex flex-col justify-center md:py-32 px-4 py-10">
@@ -77,7 +96,11 @@ function Strategy() {
       </section>
 
       {/* Section 4: Title on Right */}
-      <section className="w-full bg-[#EE3D49]">
+      <section
+        className="w-full bg-[#EE3D49]"
+        data-aos="fade-up"
+        data-aos-duration="2000"
+      >
         <div className="w-full md:w-5/6 mx-auto flex flex-col md:flex-row-reverse">
           {/* Text Section */}
           <div className="w-full flex flex-col justify-center md:py-32 px-4 py-10">
@@ -96,7 +119,7 @@ function Strategy() {
         </div>
       </section>
 
-      <section className="w-full">
+      <section className="w-full" data-aos="fade-up" data-aos-duration="2000">
         <div className="w-full md:w-5/6 mx-auto flex flex-col md:flex-row">
           {/* Text Section */}
           <div className="w-full flex flex-col justify-center md:py-32 px-4 py-10">
@@ -116,7 +139,11 @@ function Strategy() {
         </div>
       </section>
 
-      <section className="w-full bg-[#25258E]">
+      <section
+        className="w-full bg-[#25258E]"
+        data-aos="fade-up"
+        data-aos-duration="2000"
+      >
         <div className="w-full md:w-5/6 mx-auto flex flex-col md:flex-row-reverse">
           {/* Text Section */}
           <div className="w-full flex flex-col justify-center md:py-32 px-4 py-10">

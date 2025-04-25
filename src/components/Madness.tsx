@@ -8,6 +8,9 @@ import execute from "../assets/we-execute.png";
 import analyze from "../assets/we-analyze.webp";
 import Footer from "./Footer";
 import { Link } from "react-router-dom";
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const steps = [
   {
@@ -69,6 +72,14 @@ const steps = [
 ];
 
 const Method = () => {
+  useEffect(() => {
+    AOS.init({
+      once: true,
+      offset: 50,
+      easing: "ease-in-out",
+    });
+  }, []);
+
   return (
     <section className="relative">
       <Navbar />
@@ -94,6 +105,8 @@ const Method = () => {
                 className={`space-y-4 ${step.text} ${
                   isImageRight ? "order-1" : "order-2"
                 }`}
+                data-aos="fade-right"
+                data-aos-duration="2000"
               >
                 <h3 className="text-3xl md:text-4xl font-bold ">
                   {step.title}
@@ -106,6 +119,8 @@ const Method = () => {
                 className={`flex justify-center items-center ${
                   isImageRight ? "order-2" : "order-1"
                 }`}
+                data-aos="fade-left"
+                data-aos-duration="2000"
               >
                 <img
                   src={step.image}

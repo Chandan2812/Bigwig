@@ -5,14 +5,29 @@ import process from "../assets/process.png";
 import CallToActionSection from "./Footer";
 import Navbar from "./nav";
 import { Link } from "react-router-dom";
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Agency = () => {
+  useEffect(() => {
+    AOS.init({
+      once: true,
+      offset: 50,
+      easing: "ease-in-out",
+    });
+  }, []);
+
   return (
     <div className="text-white text-base font-light">
       <Navbar />
 
       {/* Narrative Section */}
-      <section className="w-full bg-gradient-to-r from-[#e43038] to-[#2d197c] px-4 md:px-4 py-24 md:py-32 relative overflow-hidden text-justify">
+      <section
+        className="w-full bg-gradient-to-r from-[#e43038] to-[#2d197c] px-4 md:px-4 py-24 md:py-32 relative overflow-hidden text-justify"
+        data-aos="fade-up"
+        data-aos-duration="2000"
+      >
         <div className="w-full md:w-5/6 mx-auto text-white text-center md:text-left">
           <h2 className="text-4xl md:text-5xl font-extrabold mb-8">
             Narrative
@@ -44,7 +59,10 @@ const Agency = () => {
       </section>
 
       {/* Mission Section */}
-      <section className="bg-white text-black px-4 md:px-4 py-10">
+      <section
+        className="bg-white text-black px-4 md:px-4 py-12"
+        data-aos="fade-up"
+      >
         <div className="w-full md:w-5/6 mx-auto flex flex-col-reverse md:flex-row items-center text-center md:text-left gap-8">
           <div className="w-full md:w-1/2 flex justify-center md:justify-between">
             <img src={mission} alt="Mission Icon" className="w-40 md:w-2/3" />
@@ -70,7 +88,11 @@ const Agency = () => {
       </section>
 
       {/* Vision Section */}
-      <section className="bg-[#2d197c] px-4 md:px-4 py-10">
+      <section
+        className="bg-[#2d197c] px-4 md:px-4 py-10"
+        data-aos="fade-up"
+        data-aos-duration="2000"
+      >
         <div className="w-full md:w-5/6 mx-auto flex flex-col-reverse lg:flex-row-reverse items-center text-white text-center md:text-left gap-8">
           <div className="w-full lg:w-1/2 flex justify-center md:justify-between">
             <img src={vision} alt="Vision Icon" className="w-72 md:w-full" />
@@ -95,7 +117,11 @@ const Agency = () => {
       </section>
 
       {/* Process Section */}
-      <section className="bg-[#e43038] px-4 md:px-4 py-10">
+      <section
+        className="bg-[#e43038] px-4 md:px-4 py-10"
+        data-aos="fade-up"
+        data-aos-duration="2000"
+      >
         <div className="w-full md:w-5/6 mx-auto flex flex-col-reverse lg:flex-row items-center text-white text-center md:text-left gap-8">
           <div className="w-full lg:w-1/2 flex justify-center md:justify-between">
             <img src={process} alt="Process Icon" className="w-44 md:w-2/3" />
@@ -120,10 +146,18 @@ const Agency = () => {
       </section>
 
       {/* Strategy Section */}
-      <section className="bg-[#2d197c] px-4 md:px-4 py-10">
+      <section
+        className="bg-[#2d197c] px-4 md:px-4 py-12"
+        data-aos="fade-up"
+        data-aos-duration="2000"
+      >
         <div className="w-full md:w-5/6 mx-auto flex flex-col-reverse lg:flex-row-reverse items-center text-white text-center md:text-left gap-8">
           <div className="w-full lg:w-1/2 flex justify-center md:justify-between">
-            <img src={strategy} alt="Strategy Icon" className="w-48 md:w-2/3" />
+            <img
+              src={strategy}
+              alt="Strategy Icon"
+              className="w-48 md:w-full"
+            />
           </div>
           <div className="w-full lg:w-1/2">
             <h2 className="text-[#e43038] text-4xl md:text-5xl font-bold mb-4 text-center md:text-left">
