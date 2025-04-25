@@ -50,10 +50,13 @@ const Agency = () => {
             <img src={mission} alt="Mission Icon" className="w-40 md:w-2/3" />
           </div>
           <div className="w-full md:w-2/3">
-            <h2 className="text-[#e43038] text-4xl md:text-5xl font-bold border-2 border-[#e43038] inline-block px-4 py-2 mb-4 text-center md:text-left">
-              Mission
-            </h2>
-            <p className="mb-3 text-lg text-justify md:text-left">
+            <div className="relative w-fit group">
+              <h2 className="text-3xl md:text-4xl text-[#F22E37] font-bold border-4 border-[#F22E37] px-4 py-2 bg-white relative z-10">
+                Mission
+              </h2>
+              <div className="absolute inset-0 translate-x-1.5 translate-y-1.5 bg-[#F22E37] z-0 transition-all duration-300 group-hover:translate-x-0 group-hover:translate-y-0 group-hover:opacity-0"></div>
+            </div>
+            <p className="mb-3 text-lg text-justify md:text-left mt-6">
               Your portion of mind plus our psyche will have their own
               <span className="font-semibold"> PARTY</span>.
             </p>

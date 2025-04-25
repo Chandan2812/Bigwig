@@ -20,9 +20,12 @@ const YBigwigSection = () => {
 
         {/* Text Section */}
         <div className="w-full md:w-1/2 bg-[#25258E] md:bg-white flex flex-col justify-center p-10 text-white md:text-black">
-          <h2 className="text-2xl md:text-3xl font-bold border-l-4 border-[#F22E37] pl-4 text-[#F22E37]">
-            Why Bigwig Media?
-          </h2>
+          <div className="relative w-fit group">
+            <h2 className="text-3xl md:text-4xl text-[#F22E37] font-bold border-4 border-[#F22E37] px-4 py-2 bg-white relative z-10">
+              Why Bigwig Media?
+            </h2>
+            <div className="absolute inset-0 translate-x-1.5 translate-y-1.5 bg-[#F22E37] z-0 transition-all duration-300 group-hover:translate-x-0 group-hover:translate-y-0 group-hover:opacity-0"></div>
+          </div>
           <p className=" text-base leading-relaxed whitespace-pre-line mt-4">
             Good things take time to occur. We, on the other hand, make this
             procedure faster. Let us be your{" "}
@@ -51,9 +54,12 @@ const YBigwigSection = () => {
 
         {/* Text Section */}
         <div className="w-full md:w-1/2 bg-[#F22E37] text-white flex flex-col justify-center p-10">
-          <h2 className="text-2xl md:text-3xl font-bold border-l-4 border-white pl-4">
-            Our Values
-          </h2>
+          <div className="relative w-fit group">
+            <h2 className="text-3xl md:text-4xl text-white font-bold border-4 border-white px-4 py-2 bg-[#F22E37] relative z-10">
+              Our Values
+            </h2>
+            <div className="absolute inset-0 translate-x-1.5 translate-y-1.5 bg-white z-0 transition-all duration-300 group-hover:translate-x-0 group-hover:translate-y-0 group-hover:opacity-0"></div>
+          </div>
           <p className="text-base leading-relaxed whitespace-pre-line mt-4">
             We believe that with a positive working environment, the results are
             excellent. Out of admiration for our customers, we invented a modern
@@ -73,9 +79,12 @@ const YBigwigSection = () => {
       <div className="w-full md:min-h-screen flex flex-col md:flex-row">
         {/* Text Section */}
         <div className="w-full md:w-1/2 bg-[#25258E] text-white flex flex-col justify-center p-10">
-          <h2 className="text-2xl md:text-3xl font-bold border-l-4 border-white pl-4">
-            Our Team
-          </h2>
+          <div className="relative w-fit group">
+            <h2 className="text-3xl md:text-4xl text-white font-bold border-4 border-white px-4 py-2 bg-[#25258E] relative z-10">
+              Our Team
+            </h2>
+            <div className="absolute inset-0 translate-x-1.5 translate-y-1.5 bg-white z-0 transition-all duration-300 group-hover:translate-x-0 group-hover:translate-y-0 group-hover:opacity-0"></div>
+          </div>
           <p className="text-base leading-relaxed whitespace-pre-line mt-4">
             Team is something that can make or break any foundation. Ours
             fortunately is the{" "}

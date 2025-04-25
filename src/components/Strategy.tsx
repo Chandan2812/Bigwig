@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import strategy from "../assets/a17_s_discovery.jpg";
+
 import CallToActionSection from "./Footer";
 import Navbar from "./nav";
 
@@ -10,13 +10,16 @@ function Strategy() {
 
       {/* Section 1: Title on Left */}
       <section className="w-full">
-        <img src={strategy} alt="" className="w-full md:h-[90vh]" />
         <div className="w-full md:w-5/6 mx-auto flex flex-col md:flex-row">
           {/* Text Section */}
           <div className="w-full flex flex-col justify-center md:py-32 px-4 py-10">
-            <h2 className="text-3xl md:text-4xl text-[#F22E37] font-bold md:border-l-4 border-[#F22E37] pl-4 text-center md:text-left">
-              Discovery Process
-            </h2>
+            <div className="relative w-fit group">
+              <h2 className="text-3xl md:text-4xl text-[#F22E37] font-bold border-4 border-[#F22E37] px-4 py-2 bg-white relative z-10">
+                Discovery Process
+              </h2>
+              <div className="absolute inset-0 translate-x-1.5 translate-y-1.5 bg-[#F22E37] z-0 transition-all duration-300 group-hover:translate-x-0 group-hover:translate-y-0 group-hover:opacity-0"></div>
+            </div>
+
             <p className="text-base leading-relaxed mt-8 text-justify md:text-left">
               Firstly, we enquire your mindset. It is important for us to know
               what you think so that we work our magic accordingly. Then comes a
@@ -97,9 +100,12 @@ function Strategy() {
         <div className="w-full md:w-5/6 mx-auto flex flex-col md:flex-row">
           {/* Text Section */}
           <div className="w-full flex flex-col justify-center md:py-32 px-4 py-10">
-            <h2 className="text-3xl md:text-4xl text-[#F22E37] font-bold md:border-l-4 border-[#F22E37] pl-4">
-              Discovery Presentation
-            </h2>
+            <div className="relative w-fit group">
+              <h2 className="text-3xl md:text-4xl text-[#F22E37] font-bold border-4 border-[#F22E37] px-4 py-2 bg-white relative z-10">
+                Discovery Presentation
+              </h2>
+              <div className="absolute inset-0 translate-x-1.5 translate-y-1.5 bg-[#F22E37] z-0 transition-all duration-300 group-hover:translate-x-0 group-hover:translate-y-0 group-hover:opacity-0"></div>
+            </div>
             <p className="text-base leading-relaxed mt-8 text-justify md:text-left">
               At the end of the discovery phase we will document all the
               findings, visuals, budgets and key recommendations for the

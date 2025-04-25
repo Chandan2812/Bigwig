@@ -95,7 +95,7 @@ const Method = () => {
                   isImageRight ? "order-1" : "order-2"
                 }`}
               >
-                <h3 className="text-3xl md:text-5xl font-bold border-l-4 pl-3 border-current">
+                <h3 className="text-3xl md:text-4xl font-bold ">
                   {step.title}
                 </h3>
                 <p className="text-base md:text-lg leading-relaxed">

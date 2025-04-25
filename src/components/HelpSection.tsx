@@ -134,11 +134,16 @@ const HelpSection = () => {
 
       <section className="w-full md:w-5/6 mx-auto p-6 font-sans">
         {/* Header */}
-        <div className="border-4 border-red-500 inline-block px-4 py-2 mb-8">
-          <span className="text-blue-700 font-bold text-2xl">HELP!</span>{" "}
-          <span className="text-red-600 text-2xl font-semibold">
-            MY THING IS NONE OF THE ABOVE
-          </span>
+        <div className=" inline-block px-4 py-2 mb-8">
+          <div className="relative w-fit group">
+            <h2 className="text-3xl md:text-4xl text-[#F22E37] font-bold border-4 border-[#F22E37] px-4 py-2 bg-white relative z-10">
+              <span className="text-blue-700 font-bold text-2xl">HELP!</span>{" "}
+              <span className="text-red-600 text-2xl font-semibold">
+                MY THING IS NONE OF THE ABOVE
+              </span>
+            </h2>
+            <div className="absolute inset-0 translate-x-1.5 translate-y-1.5 bg-[#F22E37] z-0 transition-all duration-300 group-hover:translate-x-0 group-hover:translate-y-0 group-hover:opacity-0"></div>
+          </div>
         </div>
 
         {/* Services List */}
