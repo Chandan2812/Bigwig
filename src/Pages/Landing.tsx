@@ -113,7 +113,7 @@ function Landing() {
                       Free AI Tools
                     </a>
                     <a
-                      href="#"
+                      href="https://bigwig-smm-mu.vercel.app/"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="block"
@@ -121,7 +121,7 @@ function Landing() {
                       Social Media Management
                     </a>
                     <a
-                      href="#"
+                      href="https://bigwig-orm-ten.vercel.app/"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="block"
@@ -129,7 +129,7 @@ function Landing() {
                       Review Mangement
                     </a>
                     <a
-                      href="#"
+                      href="https://unify-orpin.vercel.app/"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="block"
@@ -137,7 +137,7 @@ function Landing() {
                       LMS For Education
                     </a>
                     <a
-                      href="#"
+                      href="https://bigwig-lms.vercel.app/"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="block"
