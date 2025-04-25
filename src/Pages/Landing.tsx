@@ -4,7 +4,8 @@ import bulb from "../assets/home-icon-1.gif";
 import cube from "../assets/home_icon-2.gif";
 import ham from "../assets/nav.png";
 import { Link } from "react-router-dom";
-import "jquery.ripples"; // Assuming the package is installed or manually added
+import $ from "jquery";
+import "jquery.ripples";
 import { ChevronDown } from "lucide-react";
 
 function Landing() {
