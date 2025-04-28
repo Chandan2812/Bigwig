@@ -30,6 +30,10 @@ function Landing2() {
           alt="Logo"
           className="w-full max-h-full object-contain"
         />
+        {/* Centered Office Names */}
+        <div className="w-full absolute bottom-64 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-lg font-semibold tracking-widest z-10 text-center">
+          INDIA | DUBAI | NEW ZEALAND | AUSTRALIA
+        </div>
       </div>
 
       {/* Dropdown Menu */}

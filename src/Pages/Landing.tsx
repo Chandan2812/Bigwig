@@ -33,6 +33,11 @@ function Landing() {
       className="flex w-full h-screen bg-cover bg-center full-landing-image"
       style={{ backgroundImage: `url(${homepage})` }}
     >
+      {/* Centered Office Names */}
+      <div className="absolute bottom-28 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-2xl md:text-3xl  font-semibold tracking-widest z-10 text-center">
+        INDIA | DUBAI | NEW ZEALAND | AUSTRALIA
+      </div>
+
       {/* Left 5/6 Content */}
       <div className="relative w-5/6 h-full">
         {/* Hamburger and dropdown container */}
@@ -148,9 +153,6 @@ function Landing() {
                 )}
               </div>
 
-              <Link to="#" className="block">
-                Products
-              </Link>
               <Link to="/Clients" className="block">
                 Clients
               </Link>
