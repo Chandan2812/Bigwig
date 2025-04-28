@@ -35,7 +35,7 @@ function Landing2() {
           className="w-full max-h-full object-contain"
         />
         {/* Centered Office Names */}
-        <div className="w-full absolute bottom-48 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-sm  font-semibold tracking-widest z-10 text-center flex flex-wrap justify-center items-center gap-6">
+        <div className="w-full absolute bottom-44 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-sm  font-semibold tracking-widest z-10 text-center flex flex-wrap justify-center items-center gap-6">
           <div className="flex items-center space-x-2">
             <img src={indiaFlag} alt="India" className="w-6 h-6" />
             <span>INDIA |</span>
